@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Grow Tech Skills</title>
+    <link rel="shortcut icon" type="png" href="logo.png" >
+
+    <link rel="stylesheet" href="GTS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@700&family=Open+Sans+Condensed:wght@700&family=Oswald&family=Poppins:wght@700&family=Urbanist:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <script>
+        alert("Hlo Techie");
+        function validate(form) {
+            fail = validateName(form.name.value);
+            fail += validateEmail_id(form.email.value);
+            fail += validateContact_no(form.number.value);
+            fail += validateComments(form.comment.value);
+
+            alert(fail);
+            if (fail == "")
+                return true;
+            else {
+                alert(fail);
+                return false
+            }
+        }
+
+        function validateName(field) {
+            return (field == "") ? "Please enter your Name...\n" : "";
+        }
+
+        function validateContact_no(field) {
+            var phone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+            if (field == "")
+                return "Please enter your Contact no... \n";
+            else if (/[^0-9 ]/.test(field))
+                return "Please enter only numbers in contact box... \n";
+            else if (!phone.test(field))
+                return "Please enter valid Contact no...\n";
+            else
+                return "";
+        }
+        function validateEmail_id(field) {
+            if (field == "") {
+                return "Please enter your Email...\n";
+            }
+            else if (!((field.indexOf(".") > 0) && (field.indexOf("@") > 0)) || /[^a-z A-Z 0-9.@_-]/.test(field)) {
+                return "Please enter a valid Email id...\n";
+            }
+
+            else {
+                return "";
+            }
+        }
+        function validateComments(field) {
+            return (field == "") ? "Please give our feedback....\n" : "";
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <div id="coursePage">
+        <nav>
+            <img src="logo.png">
+            <h4 id="logo" style="margin-right:700px;"><b>Grow&nbsp;<k>Tech</k>&nbsp;Skills </b> </h4>
+
+            <div class="links">
+                <a href="GTS.html"><i class="fa fa-fw fa-home"></i> Home</a>
+                <div class="dropdown">
+                    <a class="dropbtn" href="course.html"><i class="fas fa-university"></i> Courses</a>
+
+                    <div class="dropdown-content">
+                      <a href="web.html">Web Development</a>
+                      <a href="cyber.html">Cyber Forensics</a>
+                      <a href="ethical.html">Ethical Hacking</a>
+                      <a href="cloud.html">Cloud Computing</a>
+                    </div>
+                  </div>
+                <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+
+            </div>
+        </nav>
+        <hr>
+
+        <div id="content-container">
+            <div id="content">
+
+                <h3>Please give your feedback</h3>
+                <img src="logo.png" alt="">
+
+            </div>
+        </div>
+    </div>
+
+    <div id="courses">
+
+        <br><br>
+        <form action="GTS.php" method="post" onsubmit="return validate(this)">
+            <label for="u1"><b>Name</b></label><br>
+            <input type="text" id="u1" name="name" placeholder="Your name ... ">
+            <br><br>
+
+
+
+            <label for="u3"><b>Email_id</b></label><br>
+            <input type="text" id="u3" name="email" placeholder="Your email id...">
+            <br><br>
+
+            <label for="u4"><b>Contact_no</b></label><br>
+            <input type="text" id="u4" name="number" placeholder="Your conract no...">
+            <br><br>
+
+            <label for="info"><b>Comments</b></label><br>
+            <textarea id="info" rows="4" cols="77" name="comment" placeholder="Give Your feedback here..."></textarea>
+            <br><br>
+
+            <input type="reset" value="Reset">
+            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <input type="submit" value="Submit">
+        </form>
+
+    </div>
+    <footer>
+        <div id="contact">
+            <a href="https://www.facebook.com/Grow-Tech-Skills-100755792444505/?ref=pages_you_manage"><i
+                    class="fab fa-2x fa-facebook"></i></a>
+            <a href="https://instagram.com/growtechskills?utm_medium=copy_link"><i
+                    class="fab fa-2x fa-instagram"></i></a>
+            <a href="https://twitter.com/GrowTechSkills"><i class="fab fa-2x fa-twitter"></i></a>
+        </div>&nbsp;
+        <p><a href="#coursePage">@GrowTechSkills</a></p>
+    </footer>
+
+</body>
+
+</html>

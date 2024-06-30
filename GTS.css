@@ -1,0 +1,454 @@
+@import url(https://fonts.googleapis.com/css?family=Audiowide);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+  
+}
+
+#preloader{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: screen 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+
+
+
+@keyframes screen{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+.loading {
+    display: flex;
+    flex-direction: row;
+  }
+  .loading__letter {
+    font-size: 40px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: "Audiowide";
+    color: white;
+    animation-name: bounce;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+  }
+
+  
+  .loading__letter:nth-child(2) {
+    animation-delay: .1s; 
+  }
+  .loading__letter:nth-child(3) {
+    animation-delay: .2s;
+  }
+  .loading__letter:nth-child(4) {
+    animation-delay: .3s; 
+  }
+  .loading__letter:nth-child(5) {
+    animation-delay: .4s;
+  }
+  .loading__letter:nth-child(6) {
+    animation-delay: .5s; 
+  }
+  .loading__letter:nth-child(7) {
+    animation-delay: .6s;
+  }
+  .loading__letter:nth-child(8) {
+    animation-delay: .7s;
+  }
+  .loading__letter:nth-child(9) {
+    animation-delay: .9s;
+  }
+  .loading__letter:nth-child(10) {
+    animation-delay: 1s;
+  }
+ 
+
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(0px)
+    }
+    40% {
+      transform: translateY(-40px);
+    }
+    80%,
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  /**/
+#coursePage{
+    width: 100%;
+    height: 100%;
+    background-image:
+  /*  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), */
+    /* url('photos/home2.jpg'); */
+    url('https://media.istockphoto.com/photos/abstract-luxurious-polygonal-black-background-with-gold-accents-frame-picture-id1249749650?b=1&k=20&m=1249749650&s=170667a&w=0&h=iz5G9XEqoN8KL7YA2diq8sao7TR7ltulZ3OZ1UKDEbM=');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav{
+    width: 100%;
+    height: 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dropbtn {
+  background-color:transparent;
+  color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {
+  display: block;}
+
+.dropdown:hover .dropbtn {
+  background-color:transparent;}
+
+#coursePage img{
+  
+  height: 40px;
+  width: 50px;
+  margin-left: 20px;
+}
+
+nav{
+    opacity:1.5;
+}
+nav k{
+  color: rgb(69, 180, 245);
+}
+nav h4{
+    color: rgb(241, 219, 92);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    
+}
+
+
+nav .links{
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+hr{
+    border: .1px solid rgba(255, 255, 255, 0.103);
+}
+
+
+
+a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-weight: 500;
+    font-family: 'Urbanist', sans-serif;
+}
+
+#content-container{
+    width: 100%;
+    height: 86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content{
+    width: 40%;
+    text-align: center;
+    color: white;
+}
+#content img{
+  height: 100px;
+  width: 120px;
+}
+
+
+
+#content h3{
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-weight: 150;
+    letter-spacing: 7px;
+    font-size: 50px;
+}
+
+#content h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 80;
+    letter-spacing: 10px;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+#content button{
+    font-weight: 400;
+    background-color: transparent;
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 0.7rem 2rem;
+    color: white;
+   
+    border: solid 1px white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    letter-spacing: 2px;
+}
+#content button:hover{
+  color: black;
+}
+
+#courses{
+    width: 100%;
+    min-height: 100%;
+    background-color: rgb(36, 36, 36);
+    text-align: center;
+    padding: 40px;
+    color: white;
+    font-family: 'silk serif';
+    background-image: url(https://images.unsplash.com/photo-1553356084-58ef4a67b2a7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGdyYWRpZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-size: cover;
+  }
+
+#courses h2{
+  padding: 0;
+  font-size: 50px; 
+  color: rgb(201, 46, 46);
+  font-weight:400;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#courses h3{
+  font-size: 25px;
+  font-weight:400;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#courses h4{
+  padding-left: 30px;
+  font-size: 40px;
+  font-weight:800;
+  color: #000000;
+  text-shadow: -3px 1px #c556f0;
+  text-decoration: underline;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;  
+}
+
+#courses p{
+  font-family: cursive;
+  color: black;
+}
+#courses form{
+     text-align:left;
+     margin-left: 20%;
+     margin-right: 20%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+    border:2px solid rgb(99, 96, 96);
+    border-radius: 15px;
+    padding:30px;
+    background-color: rgba(117, 89, 89, 0.5);
+    color:rgb(10, 10, 10);
+    box-shadow: -2px 2px 15px rgb(65, 64, 64);
+    
+}
+
+#courses input{
+  width: 90%;
+  height: 30px;
+  padding-left: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: cursive;
+}
+#courses textarea{
+  border-radius: 10px;
+  width: 90%;
+  padding-left: 10px;
+  font-size: 18px;
+  font-family: cursive;
+}
+#courses input[type=reset]{
+  width: 30%;
+  height: 40px ;
+  background-color: rgb(0, 162, 255);
+  
+  border-radius: 10px;
+}
+#courses input[type=submit]{
+  width: 30%;
+  height: 40px ;
+  background-color: rgb(0, 162, 255);
+  border-radius: 10px;
+}
+
+#coursesgallery{
+    margin-top: 50px;
+    width: 100%;
+    min-height: 380px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.card{
+    position: relative;
+    width: 300px;
+    height: 380px;
+    overflow: hidden;
+    margin-top: 20px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    background-size: cover;
+}
+
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.card:hover .image{
+    opacity: 0.3;
+} 
+
+.card:hover .middle{
+    opacity: 1;
+}
+
+.text {
+    color: rgb(7, 5, 6);
+    font-size: 26px;
+    padding: 16px 32px;
+    font-family:cursive;
+  }
+
+  #course4 h2{
+    text-align: left;
+    color: rgb(124, 24, 218);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 450;
+
+  }
+
+  #course4 p{
+    font-size: 20px;
+    color: black;
+     text-align: left;
+  }
+  #course4 a{
+    color: blue;
+  }
+ 
+  
+  #GTS_Team h1{
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+ .table{
+    margin: 40px 206px;
+    height:auto;
+    border:2px solid rgb(99, 96, 96);
+    border-radius: 15px;
+    padding:20px;
+    background-color: rgba(117, 89, 89, 0.5);
+    color:white;
+    box-shadow: -2px 2px 15px rgb(65, 64, 64);
+  }
+  th{
+    padding: 20px;
+    font-size: 35px;
+    color:darkviolet;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: underline;
+  }
+  td{
+    padding: 10px;
+    font-size: 25px;
+    color:cornsilk;
+    font-family:cursive;
+  }
+
+p{
+  font-size: 20px;
+}
+iframe{
+  border: 2px solid rgb(80, 8, 161);
+  width: 100%;
+  height: 600px;
+  box-shadow: -16px 28px 36px rgb(2 9 9 / 91%);
+}
+.Content {
+  text-transform: uppercase;
+  text-align: center;
+  color: #000000;
+  text-shadow: -3px 1px #c556f0;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 100px;
+  font-family: 'Times New Roman', Times, serif;
+  text-decoration: underline;
+  text-decoration-color: rgb(34, 2, 77);
+}
